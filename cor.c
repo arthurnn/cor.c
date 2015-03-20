@@ -2,12 +2,15 @@
 
 void start(coroutine* c, func f, void* arg, void* sp)
 {
+  // allocate stack and run f(arg) there.
 }
 
-void resume(coroutine *c)
+void next(coroutine* c)
 {
+  // jumtp to callee context
 }
 
 void yield(coroutine* c)
 {
+  // jump to caller context
 }
