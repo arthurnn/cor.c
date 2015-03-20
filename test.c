@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "cor.h"
 
+#define N 1024
+
 typedef struct {
   coroutine* c;
   int ret;
@@ -15,8 +17,10 @@ void core(void *arg)
 int main(void)
 {
   coroutine c;
-  start(&c, &core, void, stack+N);
+  int stack[N];
+  entry e = {&c};
+  start(&c, &core, &e, stack+N);
   while(next(&c)) {
-    printf("%d \n", it.ret);
+    printf("%d \n", e.ret);
   }
 }
