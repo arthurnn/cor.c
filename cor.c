@@ -5,9 +5,10 @@ void start(coroutine* c, func f, void* arg, void* sp)
   // allocate stack and run f(arg) there.
 }
 
-void next(coroutine* c)
+int next(coroutine* c)
 {
   // jumtp to callee context
+  return 0;
 }
 
 void yield(coroutine* c)
