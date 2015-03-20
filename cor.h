@@ -8,5 +8,5 @@ typedef struct {
 typedef void (*func)(void*);
 
 void start(coroutine* c, func f, void* arg, void* sp);
-void resume(coroutine *c);
+void next(coroutine* c);
 void yield(coroutine* c);

@@ -1,4 +1,4 @@
-#include <cor.h>
+#include "cor.h"
 
 void start(coroutine* c, func f, void* arg, void* sp)
 {
