@@ -11,6 +11,13 @@ typedef struct {
 void core(void *arg)
 {
   entry* it = (entry*) arg;
+  it.ret = 10;
+  yield(it->c);
+
+  it.ret = 20;
+  yield(it->c);
+
+  it.ret = 30;
   yield(it->c);
 }
 
